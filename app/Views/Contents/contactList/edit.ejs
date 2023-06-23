@@ -1,0 +1,99 @@
+<head>
+    <!-- GOOGLE ANALYTICS TAG -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB3J0KTX4D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-YB3J0KTX4D');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="./content/app.css">
+</head>
+
+
+<body class="fontHome">
+
+<div class="container fontHome">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <input type="hidden" name="id" value="<%= contact._id %>" >
+                         <!-- I GET THE "contact".id PART ⬆️⬆️⬆️
+                               FROM THIS FUNCTION:
+                               export function DisplayContactsAddPage(req, res, next){
+                               res.render('index', { title: 'Add Contact', page: 'contactList/edit', contact: {} });                                                                ⬆️⬆️⬆️
+                               WHICH IS INSIDE MY "contacts.controller.server.js"
+                               } -->
+
+                <div class="form-group">
+                    <label for="nameTextField">Contact Name </label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter your Name"
+                    name="name" 
+                    value="<%= contact.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="authorTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="authorTextField"
+                    placeholder="Enter your Email"
+                    name="email" 
+                    value="<%= contact.email %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="publishedTextField">Phone Number</label>
+                    <input type="number" class="form-control"
+                    id="phoneTextField"
+                    placeholder="Enter your number"
+                    name="phoneNumber" 
+                    value="<%= contact.phoneNumber %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Company Name</label>
+                    <input type="text" class="form-control"
+                    id="companyTextField"
+                    placeholder="Enter your company name"
+                    name="companyName"                     
+                    value="<%= contact.companyName %>"
+                    required
+                    >
+                    </input>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Message</label>
+                    <textarea class="form-control" id="msgTextField" placeholder="Enter your message" name="message" required><%= contact.message %></textarea>
+                </textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/contactList-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<!-- REMEMBER THE NAME IN THE INPUT FIELD MUST BE THE SAME AS THE ONE IN THE SCHEMA TO BE REGISTERED. -->
