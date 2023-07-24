@@ -4,7 +4,7 @@ import express, { urlencoded } from "express"; // is importing the Express modul
 import logger from "morgan";
 import session from "express-session";
 import bodyParser from "body-parser";
-import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser"; 
 
 //ES MODULES FIX FOR __DIRNAME
 import path, {dirname} from "path";
@@ -157,6 +157,5 @@ Overall, this code defines a JWT authentication strategy that verifies the user'
 app.use('/', router);
 app.use('/', movieRouter);
 app.use('/', authRouter);
-app.use('/api', apiRoute);
 
 export default app;

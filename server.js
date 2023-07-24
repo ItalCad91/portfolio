@@ -8,8 +8,6 @@ import http from 'http';
 // Import the app module located in './app/app.js'
 import app from './app/app.js';
 
-
-
 // Define a constant variable named 'PORT', which is either set to the value of the environment variable 'PORT' or to the value 3000 if the environment variable is not set
 const PORT = normalizePort(process.env.PORT || 3000);
 
