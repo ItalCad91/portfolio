@@ -5,14 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .hrStyle {
+      background-color: black;
+      height: 2px;
+      border-color: gray;
+    }
+  
+    .toTop {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .headerStyle {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+  
+    .bodyStyle {
+      background-color: #F8FAFB;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  
+    .fontHome {
+      font-family: Arial, sans-serif;
+      color: #333333;
+    }
+  
+    .link-secondary:hover {
+      color: cornflowerblue !important;
+    }
+  
+    .imageTextContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+  
+    .imageTextContainer img {
+      width: 280px;
+      height: auto;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .w3-cell-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -8px;
+    }
+    
+    .w3-cell {
+      width: 100%;
+      padding: 0 8px;
+    }
+    
+    @media screen and (min-width: 600px) {
+      .w3-cell {
+        width: 50%;
+      }
+    }
+
+    /* Add hover style for all list items */
+    .list-unstyled li:hover {
+      color: cornflowerblue;
+    }
+
+    .links {
+    color: hsl(161, 75%, 49%) !important;
+  }
+
+    /* Add spacing for the new button */
+    .paddingSpace:last-child {
+      margin-bottom: 20px;
+    }
+
+    /* Add styling for the new "Contact Me" button */
+    .list-unstyled li:last-child {
+      margin-top: 10px;
+    }
+  </style>
 </head>
-<body class="bodyStyle">
-  <div class="w3-padding-large fontHome" id="main">
+<body class="bodyStyle fontHome">
+  <div class="w3-padding-large paddingSpace" id="main">
+        <div class="row">          
+          <div class="col-6 col-md">
+            <ul class="list-unstyled text-small"> 
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none links" href="https://github.com/ItalCad91" target="_blank">
+                    <i class="fab fa-github"></i> Github
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <ul class="list-unstyled text-small">            
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none links" href="https://www.linkedin.com/in/riccardo-reali-/" target="_blank">
+                    <i class="fab fa-linkedin"></i> Linkedin
+                </a>
+              </li>
+            </ul>          
+          </div>
+          <div class="col-6 col-md">
+            <ul class="list-unstyled text-small">            
+              <li class="mb-1">
+                <a class="link-secondary text-decoration-none links" href="/resume/Resume.pdf" target="_blank" style="color: green;">
+                  <i class="fas fa-file-pdf"></i> Resume
+                </a>
+              </li>
+            </ul>
+          </div>                 
+        </div>
+        <hr class="hrStyle">          
     <header class="w3-container w3-center headerStyle" id="home">
       <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
         <h1 class="display-4 fw-normal">My Journey as a Software Engineer</h1>
-        <hr class="hrStyle">
         <br>
         <p class="fs-5 text-muted">
           I discovered my passion for web development while creating my first e-commerce website. I quickly realized that designing and developing websites was more fulfilling to me than running a business. Today, as a software engineering graduate, I am dedicated to building inclusive and accessible websites and small applications that can make a difference. To further develop my skills, I take on freelancing jobs on various platforms, both privately and professionally. With my enthusiasm and expertise, I strive to create innovative solutions that meet the needs of clients and users alike.
@@ -35,7 +148,7 @@
                 As a recent graduate in Software Engineering, my passion for technology ignited at a young age, and I have since been captivated by the transformative power of software in solving complex problems and enhancing people's lives.
               </p>
               <p>
-                Throughout my university journey, I acquired proficiency in a range of programming languages, including HTML, CSS, JavaScript, TypeScript, SQL, and C#. Additionally, I have worked with frameworks such as Angular and libraries like React. My college experience also equipped me with knowledge in software design principles, data structures, algorithms, and software development methodologies like Agile and Scrum.
+                Throughout my College journey, I acquired proficiency in a range of programming languages, including HTML, CSS, JavaScript, TypeScript, SQL, and C#. Additionally, I have worked with frameworks such as Angular and libraries like React. My college experience also equipped me with knowledge in software design principles, data structures, algorithms, and software development methodologies like Agile and Scrum.
               </p>
               <p>         
                 I pride myself on being detail-oriented and highly motivated, with a strong work ethic. I thrive in collaborative environments, where I can contribute to the creation of innovative software solutions. I am always eager to expand my skill set, continuously learn new technologies, and stay abreast of the latest industry trends. I firmly believe that my enthusiasm and knowledge make me an invaluable asset to any software development team.
@@ -45,33 +158,14 @@
               </p>
             </div>
           </div>
-        </div>       
-        <br>
-        <hr class="hrStyle">        
-        <h1 class="center paddingSpace">Socials and Resume</h1>
+        </div>
         <hr class="hrStyle">        
         <div class="row paddingSpace">
-          <div class="col-12 col-md">
+          <div class="col-12 col-md d-flex flex-column align-items-center">
             <p>RR Systems</p>
             <small class="d-block mb-3 text-muted">&copy; 2021–2023</small>
-          </div>     
-          <div class="col-6 col-md">
-            <ul class="list-unstyled text-small"> 
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://github.com/ItalCad91" target="_blank">Github</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <ul class="list-unstyled text-small">            
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.linkedin.com/in/riccardo-reali-/" target="_blank">Linkedin</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <ul class="list-unstyled text-small">            
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="/resume/Resume.pdf" target="_blank">Resume</a></li>
-            </ul>
-          </div>
-        </div>       
-      </div>
+          </div>          
+        </div>        
     </main>
   </div>
 </body>
@@ -85,69 +179,3 @@
 </footer>
 
 </html>
-
-<style>
-  .hrStyle {
-    background-color: black;
-    height: 2px;
-    border-color: gray;
-  }
-
-  .toTop {
-    display: flex;
-    justify-content: center;
-  }
-
-  .headerStyle {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 40px;
-  }
-
-  .bodyStyle {
-    background-color: #F8FAFB;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-
-  .fontHome {
-    font-family: Arial, sans-serif;
-    color: #333333;
-  }
-
-  .link-secondary:hover {
-    color: cornflowerblue !important;
-  }
-
-  .imageTextContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .imageTextContainer img {
-    width: 280px;
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .w3-cell-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -8px;
-  }
-  
-  .w3-cell {
-    width: 100%;
-    padding: 0 8px;
-  }
-  
-  @media screen and (min-width: 600px) {
-    .w3-cell {
-      width: 50%;
-    }
-  }
-</style>
